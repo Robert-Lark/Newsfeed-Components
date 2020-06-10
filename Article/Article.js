@@ -85,6 +85,15 @@ const data = [
     thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
+  },
+  {
+    title: 'Great Monologues from Cinema',
+    date: 'Jan 1st, 2019',
+    firstParagraph: `You can’t handle the truth! Son we live in a world that has walls, and those walls have to be guarded by men with guns. Whose gonna do it you? You Lieutenant Weinberg? I have a greater responsibility that you can possibly fathom. You weep for Santiago and you curse the Marines. You have the luxury. You have the luxury of not knowing what I know, that Santiago’s death while tragic, probably saved lives; and my existence while grotesque, and incomprehensible, to you, saves lives. You don’t want the truth because deep down in places you don’t talk about at parties, you want me on that well, you need me on that wall! We use words like honor, code, loyalty. We use these words as the backbone of a life spent defending something, you use them as a punchline. I have neither the time, nor the inclination to explain myself, to a man who rises and sleeps, under the blanket of the very freedom that I provide, and than questions the manner in which I provide them! I’d rather you just said ‘thank you’, and went on your way. Otherwise I suggest you pick up a weapon, and stand a post. Either way, I don’t give a damn, what you think you are entitled to! `,
+
+    secondParagraph: `I live in the American Gardens Building on West 81st Street on the 11th floor. My name is Patrick Bateman. I’m 27 years old. I believe in taking care of myself, and a balanced diet and a rigorous exercise routine. In the morning, if my face is a little puffy, I’ll put on an ice pack while doing my stomach crunches. I can do a thousand now. After I remove the ice pack I use a deep pore cleanser lotion. In the shower I use a water activated gel cleanser, then a honey almond body scrub, and on the face an exfoliating gel scrub. Then I apply an herb-mint facial masque which I leave on for 10 minutes while I prepare the rest of my routine. I always use an after shave lotion with little or no alcohol, because alcohol dries your face out and makes you look older. Then moisturizer, then an anti-aging eye balm followed by a final moisturizing protective lotion. There is an idea of a Patrick Bateman. Some kind of abstraction. But there is no real me. Only an entity. Something illusory. And though I can hide my cold gaze, and you can shake my hand and feel flesh gripping yours, and maybe you can even sense our lifestyles are probably comparable, I simply am not there. `,
+
+    thirdParagraph: `Of all the weapons in the vast soviet arsenal, nothing was more profitable than Avtomat Kalashnikova model of 1947. More commonly known as the AK-47, or Kalashnikov. It’s the world’s most popular assault rifle. A weapon all fighters love. An elegantly simple 9 pound amalgamation of forged steel and plywood. It doesn’t break, jam, or overheat. It’ll shoot whether it’s covered in mud or filled with sand. It’s so easy, even a child can use it; and they do. The Soviets put the gun on a coin. Mozambique put it on their flag. Since the end of the Cold War, the Kalashnikov has become the Russian people’s greatest export. After that comes vodka, caviar, and suicidal novelists. One thing is for sure, no one was lining up to buy their cars.`
   }
 ];
 
@@ -128,6 +137,7 @@ div.appendChild(h2);
 div.appendChild(p1);
 div.appendChild(p2);
 div.appendChild(p3);
+div.appendChild(p4);
 div.appendChild(span);
 
 div.classList.add('article');
@@ -143,6 +153,9 @@ p4.innerText = thirdParagraph;
 
 div.addEventListener('click', function(){
   div.classList.toggle('article-open')
+  const img = document.createElement('img');
+  p4.appendChild(img);
+    img.src = 'assets/Screen Shot 2020-06-08 at 1.41.48 PM.png';
 });
 
 return div
