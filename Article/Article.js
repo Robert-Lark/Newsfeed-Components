@@ -103,7 +103,8 @@ const data = [
 
   Your function should take either an object as its one argument, or 5 separate arguments mapping to each piece of the data object above.
 
-  Step 2: Add an event listener to the expandButton span. This listener should toggle the class 'article-open' on the 'article' div.
+  Step 2: Add an event listener to the expandButton span. 
+  This listener should toggle the class 'article-open' on the 'article' div.
 
   Step 3: Don't forget to return something from your function!
 
@@ -111,7 +112,9 @@ const data = [
 
   Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new article.
 */
+
 const articles = document.querySelector('.articles');
+
 function createArticle(title, date, firstParagraph, secondParagraph, thirdParagraph) {
 const div = document.createElement('div');
 const h2 = document.createElement('h2');
@@ -121,45 +124,31 @@ const p3 = document.createElement('p');
 const p4 = document.createElement('p');
 const span = document.createElement('span');
 
-div.classList.add('article');
-span.classList.add('expandButton');
-p1.classList.add('date');
-p2.classList.add('firstParagraph');
-p3.classList.add('secondParagraph');
-p4.classList.add('thirdParagraph');
-
-h2.textContent = title;
-p1.textContent = date;
-p1.textContent = firstParagraph;
-p1.textContent = secondParagraph;
-p1.textContent = thirdParagraph;
-
 div.appendChild(h2);
 div.appendChild(p1);
 div.appendChild(p2);
 div.appendChild(p3);
 div.appendChild(span);
 
-span.addEventListener('click', function(){
-  articles.classList.toggle('article-open')
+div.classList.add('article');
+span.classList.add('expandButton');
+p1.classList.add('date');
+
+h2.innerText = title;
+p1.innerText = date; 
+p2.innerText = firstParagraph;
+p3.innerText = secondParagraph;
+p4.innerText = thirdParagraph;
+//span.innerText = "click me!"
+
+div.addEventListener('click', function(){
+  span.classList.toggle('article-open')
 });
 
 return div
 
 }
-
-
-
-
-
 data.forEach((data) => {
-  console.log(`Creating panel: ${data.title}`);
 articles.appendChild(createArticle(data.title, data.date, data.firstParagraph, data.secondParagraph, data.thirdParagraph));
 });
 
-// panelData.forEach((obj) => {
-//   // console.log(`Creating panel: ${obj.title}`);
-  
-//   // add the whole panel to the DOM programmatically
-//   accordion.appendChild(createPanel(obj.title, obj.content));
-// });
