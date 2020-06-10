@@ -35,30 +35,33 @@ let menuItems = [
 
 
 
-// function menuMaker(data) {
-//   const div = document.createElement('div');
-//   const ul = document.createElement('ul');
 
-//   div.classList.add('menu');
+function menuMaker(menuItems) {
+  const div2 = document.createElement('div');
+  const ul = document.createElement('ul');
+  div2.classList.add('menu');
+  div2.appendChild(ul);
   
   
-//   menuItems.forEach((obj) => {
-//     const li = document.createElement('li');
-//     li.textContent = obj;
-//     ul.appendChild(li);
-//   });
-// return div
-// }
+  menuItems.forEach((obj) => {
+    const li = document.createElement('li');
+    li.textContent = obj;
+    ul.appendChild(li);
+  });
 
-// const menuButton = document.querySelector('.menu-button');
+  const menuButton = document.querySelector('.menu-button');
 
-// menuButton.addEventListener('click', function(){
-//   div.classList.toggle('menu--open')
-// })
-// const articles2 = document.querySelector('.articles');
-// menuItems.forEach((obj) => {
-//   console.log('it works')
-//   articles2.appendChild(menuMaker(menuItems));
-// })
+  menuButton.addEventListener('click', function(){
+    div2.classList.toggle('menu--open')
+  })
 
-// const menuStuff = menuMaker(menuItems);
+return div2
+}
+
+
+const articles2 = document.querySelector('.articles');
+menuItems.forEach((obj) => {
+
+  articles2.appendChild(menuMaker(menuItems));
+})
+

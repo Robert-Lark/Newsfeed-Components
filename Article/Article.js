@@ -139,10 +139,10 @@ p1.innerText = date;
 p2.innerText = firstParagraph;
 p3.innerText = secondParagraph;
 p4.innerText = thirdParagraph;
-//span.innerText = "click me!"
+
 
 div.addEventListener('click', function(){
-  span.classList.toggle('article-open')
+  div.classList.toggle('article-open')
 });
 
 return div
